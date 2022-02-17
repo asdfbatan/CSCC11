@@ -1,0 +1,110 @@
+"""
+CSCC11 - Introduction to Machine Learning, Winter 2021, Assignment 4 - Clustering
+B. Chan, S. Wei, D. Fleet
+"""
+
+%%%%%%%%%%
+%%  Step 0
+%%%%%%%%%%
+
+1) What is the average sparsity of input vectors? (in [0, 1])
+   0.9866230211716414
+
+2) Find the 10 most common terms, find the 10 least common terms.  (list, separated by commas)
+   10 most common: [get, world, go, govern, first, time, game, on, peopl, year]
+   10 least common: [chagrin, bse, angelina, revolt, Â£117m, culprit, blister, horizont, julio, chill]
+
+3) What is the average frequency of non-zero vector entries in any document?
+   29.41
+
+%%%%%%%%%%
+%% Step 1
+%%%%%%%%%%
+
+1) Can you categorize the topic for each cluster? (list, comma separated)
+   No i can't. Many of them are as larg as the others.
+
+2) What factors make clustering difficult?
+   The words that have most frequency appears in all txt output files. 
+
+3) Will we get better results with a lucky initial guess for cluster centers?
+   (yes/no and a short explanation of why)
+   Yes. With number of trial increase, errors and average gets smaller.
+
+
+%%%%%%%%%%
+%% Step 2
+%%%%%%%%%%
+
+1) What problem from step 1 is solved now?
+Errors and average decrease significantly. No words with extreme high frequency in each file now.
+
+2) What are the topics for clusters?
+Political
+film
+sport game
+sport game
+Economics
+
+3) Is the result better or worse than step 1? (give a short explanation as well)
+The result is better, as we got smaller errors and average. The new one gives importance more equally
+
+%%%%%%%%%%
+%% Step 3
+%%%%%%%%%%
+
+1) What are the topics for clusters?
+government
+film
+games
+england
+Society
+
+2) Why is the clustering better now?
+The added diffusion leads data to center cluster, and it will move words with similar context together.
+
+3) What is the general lesson you learned in clustering sparse, high-dimensional
+   data?
+   each data has same high importance. Diffuse the dataset is a must in order to get better result.
+
+
+%%%%%%%%%%
+%% Step 5
+%%%%%%%%%%
+
+1) What is the total error difference between K-Means++ and random center initialization?
+The total error difference is 0.3065400530109006 in 1 trial
+Using Random 1 trial: ERRORS: [3.5324306186256385]
+                     Average: 3.5324306186256385
+Using Kmeans++ 1 trial:ERRORS: [3.225890565614738]
+                     Average: 3.225890565614738
+
+The total error difference is 0.02444790179870271 in 5 trial
+Using Random 5 trial: ERRORS: [3.5324306186256385, 3.5276286283762124, 3.225870540481196, 3.225890565614738, 3.225890565614737]
+                     Average: 3.3475421837425046
+                     Variance: 0.02220341641089194
+Using Kmeans++ 5 trial:ERRORS: [3.225890565614738, 3.225890565614737, 3.225890565614737, 3.225890520190174, 3.711909192684626]
+                     Average: 3.323094281943802
+                     Variance: 0.03779425870359896
+                     
+2) What is the mean and variance of total errors after running K-Means++ 5 times?
+ERRORS: [3.225890565614738, 3.225890565614737, 3.225890565614737, 3.225890520190174, 3.711909192684626]
+Average: 3.323094281943802
+Variance: 0.03779425870359896
+
+3) Do the training errors appear to be more consistent?
+Yes
+
+4) Do the topics appear to be more meaningful?
+Yes, and there are some topics never seen before appears.
+
+%%%%%%%%%%
+%%  K-Means vs GMM
+%%%%%%%%%%
+
+1) Under what scenarios do the methods find drastically different clusters? Why?
+
+
+2) What happens to GMM as we increase the dimensionality of input feature? Does K-Means suffer from the same problem?
+   
+
