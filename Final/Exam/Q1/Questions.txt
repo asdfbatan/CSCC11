@@ -1,0 +1,25 @@
+"""
+CSCC11 - Introduction to Machine Learning, Winter 2021, Exam
+B. Chan
+"""
+
+Answer The Following Questions:
+
+1. Between linear and quadratic regression models, which one best fits to the model?
+Quadratic regression models
+
+2. How did you decide this was a good choice and why?
+Beause its validation error is sigficantly lower than linear regression model.
+
+3. Would you try more complex models with higher degree of polynomial? Why?
+No Because it will be too overfitting, as the change of each xi will affect the whole w. Also the calcuation load will be exploding. 
+
+4. How many parameters do we need to consider if we were to create a K degree polynomial
+   regression model for D-dimensional inputs?
+D(K+1)
+
+5. If you know some of the features are highly correlated, what would you do to reduce the 
+   number of parameters?
+I would try use Principle Component Analysis to reduce the model comlecity and reduce the calculation load. 
+The detail of PCA is to calculate the covariance matrix and find eigenvalues of each PC. Then according to the proportion of each PC can explain, choose the most wanted PC and reduce the model complexity as desired. 
+

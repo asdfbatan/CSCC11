@@ -1,0 +1,27 @@
+Answer The Following Questions:
+
+1. How many Principal Components do you think is needed to give the best fit to each of the model?
+20. Although my result gives me best prediction at 5 for each
+Because the cross validation score rise quickly before 10, and from 10-20 it's still not stable.
+But after 20 the score becomes stable and it can give the best fit to the model.
+
+2. Would you choose Naive Bayes or Gaussian Class Conditionals?
+I would choose GCC
+
+3. How did you decide the above were good choices and why?
+Mine was not able to be decided, there are some problem in my code but no tiem for debug, so I noted the correct way in my opinion.
+But in general I would like to pick GCC as it will likely give higher validation score with smaller dimension.
+
+4. Looking at the training and validation scores, they collapse into constant functions as we 
+   increase the dimensionality. Can you explain why this is happening?
+As PC increasing, the effect of noises and outliers will decrease.
+
+5. Looking at the reconstructed images using the best dimensionality of each model, do you think 
+   you can predict whether a given image is an eye easily? Why?
+No, because my reconstructed has something inside which is not an eye. 
+Also it has wrong classification on non eye image. The picture is still blurry and it's likely to make an error.
+
+6. Why would dimensionality reduction help produce a better model?
+The main reason ism dimensionality reduction can hugely reduce the model complexity and reduce the calcualtion workload.
+This efficiency will be more obvious when facing larger data.
+
