@@ -1,0 +1,53 @@
+"""
+CSCC11 - Introduction to Machine Learning, Winter 2021, Assignment 3
+B. Chan, E. Franco, D. Fleet
+"""
+
+Answer The Following Questions:
+
+Occupancy Dataset:
+1. Is a single DT prone to over-fitting with the occupancy dataset?
+Yes. When there's a single decision tree, the training accuracy is 97.81% with std devation at 1.17, validation accuracy is 92.56% with std devation at 6.63, and Test accuracy is only 90.19% with std devation at 9.96
+As we have good train accuracy with small std devation, with poor test accuracy and hihg std devation, this is a sign of overfitting.
+
+2. How does classification accuracy behave as a function of the number of trees?
+When increasing tree number from 1 to 10 (other parameters stay same), the test accuracy significantly incresed. 
+When tree number is already high, increasing tree number will slightly decrease test accuracy (i.e. from 10 to 20)
+
+3. Do you think the random forest was helpful?  Explain.
+Yes. After increase tree number from 1 to 10, the change of results is:
+Train Accuracy: 97.81% to 98.20%	Standard Deviation: 1.17 to 0.59
+Validation Accuracy: 92.56% to 96.37%	Standard Deviation: 6.63 to 0.987
+Test Accuracy: 90.19% to 97.25		Standard Deviation: 9.96 to 2.27
+We can see that all accuracy have significant increased, especially validation and test accuracy.
+Alsp, std devation decreased significantly, which means the results are more stable.
+So we can say that random forest can help reduce the over-fitting problem and stable the result.
+
+Lending Club Dataset:
+1. What is the highest accuracy you are able to achieve? Do you think you can reach an even higher
+   accuracy with just random forests?
+10 trees:
+Train Accuracies - 	Mean: 73.0908919327006 - Standard Deviation: 1.939735904989716
+Validation Accuracies - Mean: 72.28483606557378 - Standard Deviation: 1.983690003976536
+Test Accuracies - 	Mean: 72.27911993097499 - Standard Deviation: 2.0599110979452893
+30 trees:
+Train Accuracies - 	Mean: 74.90266393442623 - Standard Deviation: 0.9159538891064507
+Validation Accuracies - Mean: 74.09081104400344 - Standard Deviation: 0.9331569161112079
+Test Accuracies - 	Mean: 74.14581535806728 - Standard Deviation: 1.0427887456327436
+50 trees:
+Train Accuracies - Mean: 75.1918410267472 - Standard Deviation: 0.7622955783659254
+Validation Accuracies - Mean: 74.34965487489214 - Standard Deviation: 0.7877568001541143
+Test Accuracies - Mean: 74.46203623813633 - Standard Deviation: 0.8073918883632348
+
+
+The highest accuracy I can reach is at 50 trees, and it can be higher as we can seen, just need to take more time.
+When tree number increase, every accuracy is getting better with std devation smaller. It's reasonable to believe it can be higher, but it will becom stable at somepoint, as the incresing rate is slower when tree number increse.
+
+2. Can you think of a better way to choose split functions as opposed to the method in _find_split?
+We can categorize nodes in a decision tree for datasets having similar categorical target value.
+This is called Chi-square method. It works on the differences significance between the parent node and child nodes. 
+
+3. How does this challenge differ from that with the occupancy dataset?
+Occupancy is a relatively small handmade dataset. But Lending club is relatively big, and data have more uncertainty, outliers and bias. So the result accuracy is lower than occupancy's one, as there are more uncertainty.
+
+

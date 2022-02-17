@@ -1,0 +1,61 @@
+"""
+CSCC11 - Introduction to Machine Learning, Winter 2021, Assignment 3
+B. Chan, Z. Zhang, D. Fleet
+"""
+
+Answer The Following Questions:
+
+Visualization:
+1. Do you expect logistic regression to perform well on generic_1? Why?
+Yes. As yellow points and purple points stays together with themselves and is possible to be seperated by a line with little error,
+   
+   What if we apply the feature map defined in Equation (2) on the assignment handout?
+It's still going to perform well.
+
+2. Do you expect logistic regression to perform well on generic_2? Why? 
+No. Becuase yellow points and purple points mixed together they seperate ach other into 2 parts.
+As done in writting part, this kind of seperation will only have maximum 75% accuracy.
+
+   What if we apply the feature map defined in Equation (2) on the assignment handout?
+It can perform well as the yellow points and purple points each have 2 clusters, and they stays in different cluster. As done in written part, it's possible to find a plane seperation with litter error.
+
+3. Do you expect logistic regression to perform well on generic_3? Why?
+No. As yellow, purple and green points are all mixed together. Yellow and green can be seperated with little error but purple is mixed together together with them. Seperation will always cause considerable error.
+
+4. Why can’t we directly visualize the wine dataset? What are some ways to visualize it?
+Wine dataset has 13 attributes and we need 13-dimension to visualize it.
+One way to visualize it is to pick out 3 attributes for visualization each time, and we need 13*12/3=52 times of visualization. Comparing those 52 results to get a conclusion.
+
+
+Analysis:
+1. Generic Dataset 1: Run logistic regression without regularization and without feature map. 
+   Did you run into any numerical errors? If so, why do you think this is the case? 
+No numerical errors.
+   Now, run logistic regression with regularization. What happens? 
+   What are the train and test accuracies?
+Training Accuracy: 100.0% Test Accuracy: 100.0%. But all gradients have decreased.
+
+2. Generic Dataset 2: Run logistic regression without regularization and without feature map.
+   What are the train and test accuracies?
+Training Accuracy: 41.0%
+Test Accuracy: 28.000000000000004%
+   
+   Run it with feature map now, did the performance get better? Why do you think that is the case?
+Yes it does better with Training Accuracy: 100.0% Test Accuracy: 100.0%.
+As feature map provides a 3-dimension results and it's now able to seperate them into distinct clusters. So we can find a regression line to perfectly seperate them.
+
+
+3. Generic Dataset 3: Run logistic regression without regularization and without feature map.
+   What are the train and test accuracies?
+Training Accuracy: 79.0%
+Test Accuracy: 82.0%  
+   
+   What if we run it with feature map?
+Training Accuracy: 83.0%
+Test Accuracy: 82.0%
+
+
+4. What are the training and validation accuracies for the wine dataset?
+Training Accuracy: 100.0%
+Test Accuracy: 96.66666666666667%
+

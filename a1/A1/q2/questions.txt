@@ -1,0 +1,46 @@
+CSCC11 - Introduction to Machine Learning, Winter 2021, Assignment 1
+B. Chan, S. Wei, D. Fleet
+===========================================================
+
+For the following questions, please answer concisely in bullet points.
+
+Q1: Dataset Size
+- In general, if I increase the size of the training set, what can we expect about the model's
+  training error? What about the test error?
+Answer: Training error increase. Test error decrease.
+
+- In general, if I increase the size of the test set, what can we expect the about the model's
+  training error? What about the test error?
+Answer: Training error no change. Test error increase.
+
+- How much data should I try to obtain if I want to build a good model?
+Answer: As much as possible.
+
+
+Q2: Model Complexity
+- In general, if the model is too simple, what can we conclude about the training and test errors?
+Answer: Both will have big errors. 
+
+- In general, if the model is too complex, what can we conclude about the training and test errors?
+Answer: Training error small, but test error will be too big.
+
+- For each dataset, which (degree) model gives the best performance? How did you find out?
+For dataset1: Degree 2
+For dataset2: Degree 6
+For dataset3: Degree 4
+As at such degree, test error reach its minimal while training error keeps decreasing.
+
+- For each dataset, what degree of polynomial do you think was used to generate the data?
+For dataset1: Small at 10, large at 10
+For dataset2: Small at 10, large at 10
+For dataset3: Small at 10, large at 10
+
+Q3: Regularization
+- In general, what does regularization do to the weights? Note: You may want to look at the weight values.
+Answer: It tends to modify the loss function in order to penalize certain values of the weight which we are investigating. It's used to avoid overfitting.
+
+- In general, if we set lambda (l2_coef) to 0, what do we get?
+Answer: We get no regularization and thus test and train error are both smallest.
+
+- In general, what does increasing lambda (l2_coef) do to our loss function?
+Answer: We get strengthen regularization. Loss function will increase. i.e. model too simple and result in underfitting.
